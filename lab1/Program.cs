@@ -45,7 +45,7 @@ namespace lab1
                 new RealEstateAgencies { RealEstateAgenciesID = 12, Name = "Tokyo Properties", Addresses = "Shibuya Crossing, Tokyo", RealtorsID = 12 },
                 new RealEstateAgencies { RealEstateAgenciesID = 13, Name = "Sydney Homes", Addresses = "Bondi Beach, Sydney", RealtorsID = 13 },
                 new RealEstateAgencies { RealEstateAgenciesID = 14, Name = "Dubai Properties", Addresses = "Burj Khalifa, Dubai", RealtorsID = 14 },
-                new RealEstateAgencies { RealEstateAgenciesID = 15, Name = "Moscow Realty", Addresses = "Red Square, Moscow", RealtorsID = 15 }
+                new RealEstateAgencies { RealEstateAgenciesID = 15, Name = "Kyiv Realty", Addresses = "Red Square, Moscow", RealtorsID = 15 }
             };
 
 

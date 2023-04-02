@@ -15,7 +15,7 @@ namespace lab1
 
         public override string ToString()
         {
-            return $"Address: {Addresses}\tFloor: {Floor}\tArea: {Area}";
+            return $"Address: {Addresses}, Floor: {Floor}, Area: {Area}";
         }
     }
 
@@ -28,7 +28,7 @@ namespace lab1
 
         public override string ToString()
         {
-            return $"Name: {Name}\tAddress: {Addresses}\tRealtorsID: {RealtorsID}";
+            return $"Name: {Name}, Address: {Addresses}, RealtorsID: {RealtorsID}";
         }
     }
 
@@ -40,7 +40,7 @@ namespace lab1
 
         public override string ToString()
         {
-            return $"Name: {Name}\tPhoneNumber: {PhoneNumber}";
+            return $"Name: {Name}, PhoneNumber: {PhoneNumber}";
         }
     }
 
@@ -53,7 +53,7 @@ namespace lab1
 
         public override string ToString()
         {
-            return $"ApartmentsID: {ApartmentsID}\tRealEstateAgenciesID: {RealEstateAgenciesID}\tApartmentsPrice: {ApartmentsPrice}";
+            return $"ApartmentsID: {ApartmentsID}, RealEstateAgenciesID: {RealEstateAgenciesID}, ApartmentsPrice: {ApartmentsPrice}";
         }
     }
 }
