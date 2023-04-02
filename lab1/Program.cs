@@ -88,23 +88,23 @@ namespace lab1
             };
 
 
-            Methods.GetApartmentsByFloorAndAreaAscending(apartments);
-            Methods.GetApartmentsByAreaAndFloorDescending(apartments);
-            Methods.GroupApartmentsByFloorAndCount(apartments);
-            Methods.GroupApartmentsByFloorAndAverageArea(apartments);
+            Methods.GetApartmentsByFloorAreaAsc(apartments);
+            Methods.GetApartmentsByAreaFloorDesc(apartments);
+            Methods.GroupApartmentsByFloorCount(apartments);
+            Methods.GroupApartmentsByFloorAvgArea(apartments);
             Methods.GetAgenciesWithApartments(realEstateAgencies, apartmentsRealEstateAgencies);
             Methods.GetRealtorsByPhoneNumber(realtors);
-            Methods.GetApartmentsByAreaAndFloor(apartments);
-            Methods.GetApartmentsByFloorAndAreaDescending(apartments);
-            Methods.GroupApartmentsByFloorAndAverageAreaWhereFloorGreaterOrEqualTo5(apartments);
-            Methods.GetAgenciesWithApartmentsByPrice(realEstateAgencies, apartmentsRealEstateAgencies);
-            Methods.GetRealtorsByNameStartingWithAOrB(realtors);
+            Methods.GetApartmentsByAreaFloor(apartments);
+            Methods.GetApartmentsByFloorAreaDesc(apartments);
+            Methods.GroupApartmentsByFloorGr4AvgArea(apartments);
+            Methods.GetAgenciesApartmentsByPrice(realEstateAgencies, apartmentsRealEstateAgencies);
+            Methods.GetRealtorsByNameAOrB(realtors);
             Methods.GetApartmentsByPrice(apartments, apartmentsRealEstateAgencies);
             Methods.GetAgenciesWithApartmentCount(realEstateAgencies, apartmentsRealEstateAgencies);
-            Methods.GroupApartmentsByFloorAndSumAreaWhereFloorLessOrEqualTo3(apartments);
-            Methods.GetApartmentsByAreaAndPrice(apartments, apartmentsRealEstateAgencies);
-            Methods.GetAgenciesWithNameAndAddress(realEstateAgencies);
-            Methods.GetRealtorsWithNameAndPhoneNumber(realtors);
+            Methods.GroupApartmentsByFloorSumAreaFloorLess3(apartments);
+            Methods.GetApartmentsByAreaPrice(apartments, apartmentsRealEstateAgencies);
+            Methods.GetAgenciesWithNameAddress(realEstateAgencies);
+            Methods.GetRealtorsWithNamePhoneNumber(realtors);
             Methods.GetUnsoldApartments(apartments, apartmentsRealEstateAgencies);
             Methods.GetAllApartments(apartments);
             Methods.GetAllRealEstateAgencies(realEstateAgencies);

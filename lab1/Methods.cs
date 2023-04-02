@@ -9,7 +9,7 @@ namespace lab1
     internal static class Methods
     {
         // 1. Get all apartments with floor greater than or equal to 5 and sort them by area in ascending order
-        public static void GetApartmentsByFloorAndAreaAscending(List<Apartments> apartments)
+        public static void GetApartmentsByFloorAreaAsc(List<Apartments> apartments)
         {
             var query = from apartment in apartments
                         where apartment.Floor >= 5
@@ -24,7 +24,7 @@ namespace lab1
         }
 
         // 2. Get all apartments with area greater than 70 and sort them by floor in descending order
-        public static void GetApartmentsByAreaAndFloorDescending(List<Apartments> apartments)
+        public static void GetApartmentsByAreaFloorDesc(List<Apartments> apartments)
         {
             var query = apartments
                 .Where(apartment => apartment.Area > 70)
@@ -38,7 +38,7 @@ namespace lab1
         }
 
         // 3. Group apartments by floor and count the number of apartments on each floor
-        public static void GroupApartmentsByFloorAndCount(List<Apartments> apartments)
+        public static void GroupApartmentsByFloorCount(List<Apartments> apartments)
         {
             var query = from apartment in apartments
                         group apartment by apartment.Floor into floorGroup
@@ -52,7 +52,7 @@ namespace lab1
         }
 
         // 4. Group apartments by floor and calculate the average area of each floor
-        public static void GroupApartmentsByFloorAndAverageArea(List<Apartments> apartments)
+        public static void GroupApartmentsByFloorAvgArea(List<Apartments> apartments)
         {
             var query = apartments
                 .GroupBy(apartment => apartment.Floor)
@@ -95,7 +95,7 @@ namespace lab1
         }
 
         // 7. Get all apartments with an area greater than 70 and a floor greater than or equal to 5
-        public static void GetApartmentsByAreaAndFloor(List<Apartments> apartments)
+        public static void GetApartmentsByAreaFloor(List<Apartments> apartments)
         {
             var query = from apartment in apartments
                         where apartment.Area > 70 && apartment.Floor >= 5
@@ -109,7 +109,7 @@ namespace lab1
         }
 
         // 8. Get all apartments that are not on the first floor and sort them by area in descending order
-        public static void GetApartmentsByFloorAndAreaDescending(List<Apartments> apartments)
+        public static void GetApartmentsByFloorAreaDesc(List<Apartments> apartments)
         {
             var query = apartments
                 .Where(apartment => apartment.Floor != 1)
@@ -122,15 +122,15 @@ namespace lab1
             }
         }
 
-        // 9. Group apartments by floor and calculate the average area of each floor, where the floor is greater than or equal to 5
-        public static void GroupApartmentsByFloorAndAverageAreaWhereFloorGreaterOrEqualTo5(List<Apartments> apartments)
+        // 9. Group apartments by floor and calculate the average area of each floor, where the floor is greater than or equal to 4
+        public static void GroupApartmentsByFloorGr4AvgArea(List<Apartments> apartments)
         {
             var query = from apartment in apartments
-                        where apartment.Floor >= 5
+                        where apartment.Floor >= 4
                         group apartment by apartment.Floor into floorGroup
                         select new { Floor = floorGroup.Key, AverageArea = floorGroup.Average(apartment => apartment.Area) };
 
-            Console.WriteLine("\nGroup apartments by floor and calculate the average area of each floor, where the floor is greater than or equal to 5");
+            Console.WriteLine("\nGroup apartments by floor and calculate the average area of each floor, where the floor is greater than or equal to 4");
             foreach (var item in query)
             {
                 Console.WriteLine($"Floor: {item.Floor}, Average area: {item.AverageArea}");
@@ -138,7 +138,7 @@ namespace lab1
         }
 
         // 10. Get all real estate agencies that have apartments for sale with a price greater than or equal to 300000 and sort them by name in descending order
-        public static void GetAgenciesWithApartmentsByPrice(List<RealEstateAgencies> realEstateAgencies, List<Apartments_RealEstateAgencies> apartmentAgencies)
+        public static void GetAgenciesApartmentsByPrice(List<RealEstateAgencies> realEstateAgencies, List<Apartments_RealEstateAgencies> apartmentAgencies)
         {
             var query = (from realEstateAgency in realEstateAgencies
                         join apartmentAgency in apartmentAgencies on realEstateAgency.RealEstateAgenciesID equals apartmentAgency.RealEstateAgenciesID
@@ -154,7 +154,7 @@ namespace lab1
         }
 
         // 11. Get all realtors whose name starts with "A" or "B" and sort them by name in ascending order
-        public static void GetRealtorsByNameStartingWithAOrB(List<Realtors> realtors)
+        public static void GetRealtorsByNameAOrB(List<Realtors> realtors)
         {
             var query = realtors
                 .Where(realtor => realtor.Name.StartsWith("A") || realtor.Name.StartsWith("B"))
@@ -198,7 +198,7 @@ namespace lab1
         }
 
         // 14. Group apartments by floor and calculate the sum of their areas for each floor, where the floor is less than or equal to 3
-        public static void GroupApartmentsByFloorAndSumAreaWhereFloorLessOrEqualTo3(List<Apartments> apartments)
+        public static void GroupApartmentsByFloorSumAreaFloorLess3(List<Apartments> apartments)
         {
             var query = from apartment in apartments
                         where apartment.Floor <= 3
@@ -213,7 +213,7 @@ namespace lab1
         }
 
         //15. Get all apartments with an area greater than or equal to 80 and a price greater than or equal to 250000, sorted by price in ascending
-        public static void GetApartmentsByAreaAndPrice(List<Apartments> apartments, List<Apartments_RealEstateAgencies> apartmentAgencies)
+        public static void GetApartmentsByAreaPrice(List<Apartments> apartments, List<Apartments_RealEstateAgencies> apartmentAgencies)
         {
             var query = from apartment in apartments
                         join apartmentAgency in apartmentAgencies on apartment.ApartmentsID equals apartmentAgency.ApartmentsID
@@ -229,7 +229,7 @@ namespace lab1
         }
 
         // 16. Get all real estate agencies and their addresses, sorted by name in ascending order
-        public static void GetAgenciesWithNameAndAddress(List<RealEstateAgencies> realEstateAgencies)
+        public static void GetAgenciesWithNameAddress(List<RealEstateAgencies> realEstateAgencies)
         {
             var query = realEstateAgencies.OrderBy(realEstateAgency => realEstateAgency.Name)
                                           .Select(realEstateAgency => new { realEstateAgency.Name, realEstateAgency.Addresses });
@@ -242,7 +242,7 @@ namespace lab1
         }
 
         // 17. Get all realtors and their phone numbers, sorted by phone number in ascending order
-        public static void GetRealtorsWithNameAndPhoneNumber(List<Realtors> realtors)
+        public static void GetRealtorsWithNamePhoneNumber(List<Realtors> realtors)
         {
             var query = realtors.OrderBy(realtor => realtor.PhoneNumber)
                                 .Select(realtor => new { realtor.Name, realtor.PhoneNumber });
