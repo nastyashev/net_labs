@@ -16,7 +16,7 @@ namespace lab1
                         orderby apartment.Area ascending
                         select apartment;
             
-            Console.WriteLine("\n1. Get all apartments with floor greater than or equal to 5 and sort them by area in ascending order");
+            Console.WriteLine("\nGet all apartments with floor greater than or equal to 5 and sort them by area in ascending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -30,7 +30,7 @@ namespace lab1
                 .Where(apartment => apartment.Area > 70)
                 .OrderByDescending(apartment => apartment.Floor);
 
-            Console.WriteLine("\n2. Get all apartments with area greater than 70 and sort them by floor in descending order");
+            Console.WriteLine("\nGet all apartments with area greater than 70 and sort them by floor in descending order");
             foreach(var item in query)
             {
                 Console.WriteLine(item);
@@ -44,7 +44,7 @@ namespace lab1
                         group apartment by apartment.Floor into floorGroup
                         select new { Floor = floorGroup.Key, Count = floorGroup.Count() };
 
-            Console.WriteLine("\n3. Group apartments by floor and count the number of apartments on each floor");
+            Console.WriteLine("\nGroup apartments by floor and count the number of apartments on each floor");
             foreach (var item in query)
             {
                 Console.WriteLine($"Floor: {item.Floor}\tCount: {item.Count}");
@@ -58,7 +58,7 @@ namespace lab1
                 .GroupBy(apartment => apartment.Floor)
                 .Select(floorGroup => new { Floor = floorGroup.Key, AverageArea = floorGroup.Average(apartment => apartment.Area) });
 
-            Console.WriteLine("\n4. Group apartments by floor and calculate the average area of each floor");
+            Console.WriteLine("\nGroup apartments by floor and calculate the average area of each floor");
             foreach (var item in query)
             {
                 Console.WriteLine($"Floor: {item.Floor}\tAverage area: {item.AverageArea}");
@@ -73,7 +73,7 @@ namespace lab1
                         orderby realEstateAgency.Name ascending
                         select realEstateAgency;
 
-            Console.WriteLine("\n5. Get all real estate agencies that have at least one apartment for sale and sort them by name in ascending order");
+            Console.WriteLine("\nGet all real estate agencies that have at least one apartment for sale and sort them by name in ascending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -87,7 +87,7 @@ namespace lab1
                 .Where(realtor => realtor.PhoneNumber.StartsWith("555-555"))
                 .OrderByDescending(realtor => realtor.Name);
 
-            Console.WriteLine("\n6. Get all realtors whose phone number starts with \"555-555\" and sort them by name in descending order");
+            Console.WriteLine("\nGet all realtors whose phone number starts with \"555-555\" and sort them by name in descending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -101,7 +101,7 @@ namespace lab1
                         where apartment.Area > 70 && apartment.Floor >= 5
                         select apartment;
 
-            Console.WriteLine("\n7. Get all apartments with an area greater than 70 and a floor greater than or equal to 5");
+            Console.WriteLine("\nGet all apartments with an area greater than 70 and a floor greater than or equal to 5");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -115,7 +115,7 @@ namespace lab1
                 .Where(apartment => apartment.Floor != 1)
                 .OrderByDescending(apartment => apartment.Area);
 
-            Console.WriteLine("\n8. Get all apartments that are not on the first floor and sort them by area in descending order");
+            Console.WriteLine("\nGet all apartments that are not on the first floor and sort them by area in descending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -130,7 +130,7 @@ namespace lab1
                         group apartment by apartment.Floor into floorGroup
                         select new { Floor = floorGroup.Key, AverageArea = floorGroup.Average(apartment => apartment.Area) };
 
-            Console.WriteLine("\n9. Group apartments by floor and calculate the average area of each floor, where the floor is greater than or equal to 5");
+            Console.WriteLine("\nGroup apartments by floor and calculate the average area of each floor, where the floor is greater than or equal to 5");
             foreach (var item in query)
             {
                 Console.WriteLine($"Floor: {item.Floor}\tAverage area: {item.AverageArea}");
@@ -146,7 +146,7 @@ namespace lab1
                         orderby realEstateAgency.Name descending
                         select realEstateAgency;
 
-            Console.WriteLine("\n10. Get all real estate agencies that have apartments for sale with a price greater than or equal to 100000 and sort them by name in descending order");
+            Console.WriteLine("\nGet all real estate agencies that have apartments for sale with a price greater than or equal to 100000 and sort them by name in descending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -160,7 +160,7 @@ namespace lab1
                 .Where(realtor => realtor.Name.StartsWith("A") || realtor.Name.StartsWith("B"))
                 .OrderBy(realtor => realtor.Name);
 
-            Console.WriteLine("\n11. Get all realtors whose name starts with \"A\" or \"B\" and sort them by name in ascending order");
+            Console.WriteLine("\nGet all realtors whose name starts with \"A\" or \"B\" and sort them by name in ascending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -176,7 +176,7 @@ namespace lab1
                         orderby apartmentAgency.ApartmentsPrice descending
                         select apartment;
 
-            Console.WriteLine("\n12. Get all apartments that have a price between 50000 and 100000, sorted by price in descending order");
+            Console.WriteLine("\nGet all apartments that have a price between 50000 and 100000, sorted by price in descending order");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -190,7 +190,7 @@ namespace lab1
                         join apartmentAgency in apartmentAgencies on realEstateAgency.RealEstateAgenciesID equals apartmentAgency.RealEstateAgenciesID into agencyApartments
                         select new { realEstateAgency.Name, Count = agencyApartments.Count() };
 
-            Console.WriteLine("\n13. Get all real estate agencies and the number of apartments they have for sale");
+            Console.WriteLine("\nGet all real estate agencies and the number of apartments they have for sale");
             foreach (var item in query)
             {
                 Console.WriteLine($"Name: {item.Name}\tCount: {item.Count}");
@@ -205,7 +205,7 @@ namespace lab1
                         group apartment by apartment.Floor into floorGroup
                         select new { Floor = floorGroup.Key, SumArea = floorGroup.Sum(apartment => apartment.Area) };
 
-            Console.WriteLine("\n13. Get all real estate agencies and the number of apartments they have for sale");
+            Console.WriteLine("\nGroup apartments by floor and calculate the sum of their areas for each floor, where the floor is less than or equal to 3");
             foreach (var item in query)
             {
                 Console.WriteLine($"Floor: {item.Floor}\tSum area: {item.SumArea}");
@@ -221,7 +221,7 @@ namespace lab1
                         orderby apartmentAgency.ApartmentsPrice ascending
                         select apartment;
 
-            Console.WriteLine("\n15. Get all apartments with an area greater than or equal to 80 and a price greater than or equal to 150000, sorted by price in ascending");
+            Console.WriteLine("\nGet all apartments with an area greater than or equal to 80 and a price greater than or equal to 150000, sorted by price in ascending");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -234,7 +234,7 @@ namespace lab1
             var query = realEstateAgencies.OrderBy(realEstateAgency => realEstateAgency.Name)
                                           .Select(realEstateAgency => new { realEstateAgency.Name, realEstateAgency.Addresses });
 
-            Console.WriteLine("\n16. Get all real estate agencies and their addresses, sorted by name in ascending order");
+            Console.WriteLine("\nGet all real estate agencies and their addresses, sorted by name in ascending order");
             foreach (var item in query)
             {
                 Console.WriteLine($"Name: {item.Name}\tAddress: {item.Addresses}");
@@ -247,7 +247,7 @@ namespace lab1
             var query = realtors.OrderBy(realtor => realtor.PhoneNumber)
                                 .Select(realtor => new { realtor.Name, realtor.PhoneNumber });
 
-            Console.WriteLine("\n17. Get all realtors and their phone numbers, sorted by phone number in ascending order");
+            Console.WriteLine("\nGet all realtors and their phone numbers, sorted by phone number in ascending order");
             foreach (var item in query)
             {
                 Console.WriteLine($"Name: {item.Name}\tPhone number: {item.PhoneNumber}");
@@ -261,7 +261,7 @@ namespace lab1
                         where !(from apartmentAgency in apartmentAgencies select apartmentAgency.ApartmentsID).Contains(apartment.ApartmentsID)
                         select apartment;
 
-            Console.WriteLine("\n19. Get all apartments that are not sold by any real estate agency");
+            Console.WriteLine("\nGet all apartments that are not sold by any real estate agency");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -274,7 +274,7 @@ namespace lab1
             var query = from apartment in apartments
                         select apartment;
 
-            Console.WriteLine("\n19. Get all apartments");
+            Console.WriteLine("\nGet all apartments");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -287,7 +287,7 @@ namespace lab1
             var query = from realEstateAgency in realEstateAgencies
                         select realEstateAgency;
 
-            Console.WriteLine("\n20. Get all real estate agencies");
+            Console.WriteLine("\nGet all real estate agencies");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
@@ -300,7 +300,7 @@ namespace lab1
             var query = from realtor in realtors
                         select realtor;
 
-            Console.WriteLine("\n21. Get all realtors");
+            Console.WriteLine("\nGet all realtors");
             foreach (var item in query)
             {
                 Console.WriteLine(item);
