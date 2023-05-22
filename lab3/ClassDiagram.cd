@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="lab3.Barista">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAEQIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Barista.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="drinkBuilder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="lab3.Drink">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Drink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab3.TeaBuilder" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrinkBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.476" />
+  </Class>
+  <Class Name="lab3.LatteBuilder" BaseTypeListCollapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrinkBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.398" />
+  </Class>
+  <Interface Name="lab3.IDrinkBuilder">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrinkBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
