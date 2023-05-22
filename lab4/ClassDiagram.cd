@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="lab4.Television">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAEAAABAAAAAAAAABAAAAAAAAAAQAAAAAAAAAg=</HashCode>
+      <FileName>HomeTheater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.DVDPlayer">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAAAAAAAAAgAAAAAAAAAAAAAAAAAA4QAAAAAAAAA=</HashCode>
+      <FileName>HomeTheater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.Receiver">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAIAAAAAACAAAAAAAAAAAAACgQAAAAAAAAAA=</HashCode>
+      <FileName>HomeTheater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.HomeTheaterFacade">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <AssociationLine Name="television" Type="lab4.Television" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="2.083" />
+        <Point X="2.625" Y="2.083" />
+        <Point X="2.625" Y="4.532" />
+        <Point X="2" Y="4.532" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="-0.242" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAQAAAEAAAAAEAAAAAAAAAAAAAAgRABAAAAAAAA=</HashCode>
+      <FileName>HomeTheaterFacade.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="receiver" />
+      <Field Name="television" />
+      <Field Name="dvdPlayer" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
