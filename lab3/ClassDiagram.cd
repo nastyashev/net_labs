@@ -11,26 +11,46 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="lab3.Drink">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+    <Position X="4" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQgAAAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Drink.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="lab3.TeaBuilder" BaseTypeListCollapsed="true">
-    <Position X="2.75" Y="3.5" Width="1.5" />
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="drink" Type="lab3.Drink" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.375" Y="2.373" />
+        <Point X="3.375" Y="3.688" />
+        <Point X="4" Y="3.688" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>BAAAAAQAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>DrinkBuilder.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="drink" />
+    </ShowAsAssociation>
     <Lollipop Position="0.476" />
   </Class>
   <Class Name="lab3.LatteBuilder" BaseTypeListCollapsed="true">
-    <Position X="5" Y="3.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="drink" Type="lab3.Drink" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.875" Y="2.373" />
+        <Point X="5.875" Y="3.688" />
+        <Point X="5.5" Y="3.688" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>BAAAAAQAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>DrinkBuilder.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="drink" />
+    </ShowAsAssociation>
     <Lollipop Position="0.398" />
   </Class>
   <Interface Name="lab3.IDrinkBuilder">
