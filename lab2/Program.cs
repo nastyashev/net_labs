@@ -100,9 +100,6 @@ namespace lab2
             Data readData =  ManageXML.OutputXmlFile(path);
 
             Print.PrintToConsole(readData);
-
-            XDocument fileData = XDocument.Load(path);
-            Console.WriteLine();
         }
     }
 }

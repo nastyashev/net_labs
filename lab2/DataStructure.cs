@@ -30,11 +30,6 @@ namespace lab2
         {
             return $"Address: {Addresses}, Floor: {Floor}, Area: {Area}";
         }
-
-        public static Apartment Parse(XElement apartments)
-        {
-            return new Apartment ((int)apartments.Element("ApartmentsID"), (string)apartments.Element("Addresses"), (int)apartments.Element("Floor"), (double)(apartments.Element("Area"))));
-        }
     }
 
     public class RealEstateAgencies
